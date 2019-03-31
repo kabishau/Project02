@@ -26,7 +26,7 @@ class ViewController: UIViewController {
         askQuestion()
     }
     
-    func askQuestion(action: UIAlertAction! = nil) {
+    func askQuestion() {
         
         countries.shuffle()
         correctAnswer = Int.random(in: 0...2)
@@ -49,7 +49,9 @@ class ViewController: UIViewController {
         }
         
         let alertController = UIAlertController(title: title, message: "Your score is \(score)", preferredStyle: .alert)
-        let continueAction = UIAlertAction(title: "Continue", style: .default, handler: askQuestion)
+        let continueAction = UIAlertAction(title: "Continue", style: .default) { (action) in
+            self.askQuestion()
+        }
         alertController.addAction(continueAction)
         present(alertController, animated: true, completion: nil)
     }
