@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B6A47DB22586CFB00BE3F57 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6A47DA22586CFB00BE3F57 /* DetailViewController.swift */; };
 		5BC8AB4E224DC053007152AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC8AB4D224DC053007152AB /* AppDelegate.swift */; };
 		5BC8AB50224DC053007152AB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC8AB4F224DC053007152AB /* ViewController.swift */; };
 		5BC8AB53224DC053007152AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BC8AB51224DC053007152AB /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5B6A47DA22586CFB00BE3F57 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		5BC8AB4A224DC053007152AB /* Project02.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Project02.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BC8AB4D224DC053007152AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5BC8AB4F224DC053007152AB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +58,7 @@
 			children = (
 				5BC8AB4D224DC053007152AB /* AppDelegate.swift */,
 				5BC8AB4F224DC053007152AB /* ViewController.swift */,
+				5B6A47DA22586CFB00BE3F57 /* DetailViewController.swift */,
 				5BC8AB51224DC053007152AB /* Main.storyboard */,
 				5BC8AB54224DC056007152AB /* Assets.xcassets */,
 				5BC8AB56224DC056007152AB /* LaunchScreen.storyboard */,
@@ -135,6 +138,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B6A47DB22586CFB00BE3F57 /* DetailViewController.swift in Sources */,
 				5BC8AB50224DC053007152AB /* ViewController.swift in Sources */,
 				5BC8AB4E224DC053007152AB /* AppDelegate.swift in Sources */,
 			);

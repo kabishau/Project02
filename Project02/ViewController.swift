@@ -1,61 +1,33 @@
 import UIKit
 
-class ViewController: UIViewController {
-
-    @IBOutlet weak var button1: UIButton!
-    @IBOutlet weak var button2: UIButton!
-    @IBOutlet weak var button3: UIButton!
+class ViewController: UITableViewController {
     
     var countries = [String]()
-    var score = 0
-    var correctAnswer = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         countries = ["estonia", "france", "germany", "ireland", "italy", "monaco", "nigeria", "poland", "russia", "spain", "uk", "us"]
-        
-        button1.layer.borderWidth = 1
-        button2.layer.borderWidth = 1
-        button3.layer.borderWidth = 1
-        
-        button1.layer.borderColor = UIColor.darkGray.cgColor
-        button2.layer.borderColor = UIColor.darkGray.cgColor
-        button3.layer.borderColor = UIColor.darkGray.cgColor
-        
-        askQuestion()
+        print("got there")
+    
     }
     
-    func askQuestion() {
-        
-        countries.shuffle()
-        correctAnswer = Int.random(in: 0...2)
-        
-        button1.setImage(UIImage(named: countries[0]), for: .normal)
-        button2.setImage(UIImage(named: countries[1]), for: .normal)
-        button3.setImage(UIImage(named: countries[2]), for: .normal)
-        
-        title = countries[correctAnswer].uppercased()
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return countries.count
     }
     
-    @IBAction func buttonTapped(_ sender: UIButton) {
-        var title: String
-        if sender.tag == correctAnswer {
-            title = "Correct"
-            score += 1
-        } else {
-            title = "Wrong"
-            score -= 1
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Country", for: indexPath)
+        cell.textLabel?.text = countries[indexPath.row]
+        cell.imageView?.image = UIImage(named: countries[indexPath.row])
+        return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let viewController = storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as? DetailViewController {
+            viewController.country = countries[indexPath.row]
+            navigationController?.pushViewController(viewController, animated: true)
         }
-        
-        let alertController = UIAlertController(title: title, message: "Your score is \(score)", preferredStyle: .alert)
-        let continueAction = UIAlertAction(title: "Continue", style: .default) { (action) in
-            self.askQuestion()
-        }
-        alertController.addAction(continueAction)
-        present(alertController, animated: true, completion: nil)
     }
-    
-    
 }
 

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yk7-ye-DZu">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IlG-mu-1Sm">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -11,79 +11,83 @@
     </dependencies>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <scene sceneID="gd9-UW-mTH">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Project02" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <tableViewController id="AVz-wj-oya" customClass="ViewController" customModule="Project02" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="J3c-fi-yfM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Country" id="fqP-GR-hH3">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fqP-GR-hH3" id="buy-Yn-0Oc">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="AVz-wj-oya" id="bcf-Vc-olr"/>
+                            <outlet property="delegate" destination="AVz-wj-oya" id="x9e-Qy-uW2"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="m1O-Tw-Khw"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GGC-uz-lFd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2730" y="760"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="C0Q-YR-MYP">
+            <objects>
+                <viewController storyboardIdentifier="DetailViewController" id="ieV-iS-41A" customClass="DetailViewController" customModule="Project02" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aFQ-dI-pi8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="eax-d5-9j1">
-                                <rect key="frame" x="87.5" y="114" width="200" height="364"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gDR-5D-iBD">
-                                        <rect key="frame" x="0.0" y="0.0" width="200" height="100"/>
-                                        <state key="normal" image="estonia"/>
-                                        <connections>
-                                            <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4KH-m7-70K"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OGS-DX-hcs">
-                                        <rect key="frame" x="0.0" y="132" width="200" height="100"/>
-                                        <state key="normal" image="germany"/>
-                                        <connections>
-                                            <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="h13-5b-Zgs"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xhw-13-kMu">
-                                        <rect key="frame" x="0.0" y="264" width="200" height="100"/>
-                                        <state key="normal" image="estonia"/>
-                                        <connections>
-                                            <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VAL-EY-iHB"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="germany" translatesAutoresizingMaskIntoConstraints="NO" id="LGE-3R-0mM">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="eax-d5-9j1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JMM-fi-4vq"/>
-                            <constraint firstItem="eax-d5-9j1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="gYQ-R9-7Au"/>
+                            <constraint firstItem="5zO-LW-98T" firstAttribute="trailing" secondItem="LGE-3R-0mM" secondAttribute="trailing" id="E2A-Oy-7A1"/>
+                            <constraint firstItem="5zO-LW-98T" firstAttribute="bottom" secondItem="LGE-3R-0mM" secondAttribute="bottom" id="ZQ7-2B-ikD"/>
+                            <constraint firstItem="LGE-3R-0mM" firstAttribute="top" secondItem="5zO-LW-98T" secondAttribute="top" id="goe-ME-1CA"/>
+                            <constraint firstItem="LGE-3R-0mM" firstAttribute="leading" secondItem="5zO-LW-98T" secondAttribute="leading" id="jwX-f9-qRU"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <viewLayoutGuide key="safeArea" id="5zO-LW-98T"/>
                     </view>
-                    <navigationItem key="navigationItem" id="AgC-Y9-Tem"/>
                     <connections>
-                        <outlet property="button1" destination="gDR-5D-iBD" id="rIG-up-nBF"/>
-                        <outlet property="button2" destination="OGS-DX-hcs" id="7Kp-PZ-my7"/>
-                        <outlet property="button3" destination="Xhw-13-kMu" id="z8H-Ib-tTE"/>
+                        <outlet property="imageView" destination="LGE-3R-0mM" id="kK9-Cs-8SN"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cbf-Of-420" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1074" y="760"/>
+            <point key="canvasLocation" x="3614" y="760"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="Dwr-wJ-3ST">
+        <scene sceneID="vYd-ja-kT6">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yk7-ye-DZu" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="IlG-mu-1Sm" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="MwI-M8-znB">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="NJ7-dL-4Lm">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="dfU-Bv-fZ0"/>
+                        <segue destination="AVz-wj-oya" kind="relationship" relationship="rootViewController" id="M6F-aX-PkM"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dO6-sR-fIu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rCe-V0-OWh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="132" y="759.67016491754134"/>
+            <point key="canvasLocation" x="1781.5999999999999" y="759.67016491754134"/>
         </scene>
     </scenes>
     <resources>
-        <image name="estonia" width="200" height="100"/>
         <image name="germany" width="200" height="100"/>
     </resources>
 </document>
