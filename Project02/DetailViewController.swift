@@ -14,6 +14,11 @@ class DetailViewController: UIViewController {
         }
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(shareFlagTapped))
+        
+        imageView.layer.borderWidth = 1
+        imageView.layer.borderColor = UIColor.lightGray.cgColor
+        imageView.layer.cornerRadius = 5
+        imageView.clipsToBounds = true
     }
     
     @objc func shareFlagTapped() {
