@@ -23,6 +23,9 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gDR-5D-iBD">
                                         <rect key="frame" x="0.0" y="0.0" width="200" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="gDR-5D-iBD" secondAttribute="height" multiplier="2:1" id="aau-QI-c2N"/>
+                                        </constraints>
                                         <state key="normal" image="estonia"/>
                                         <connections>
                                             <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4KH-m7-70K"/>
@@ -30,6 +33,9 @@
                                     </button>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OGS-DX-hcs">
                                         <rect key="frame" x="0.0" y="132" width="200" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="OGS-DX-hcs" secondAttribute="height" multiplier="2:1" id="CZW-hv-vJz"/>
+                                        </constraints>
                                         <state key="normal" image="germany"/>
                                         <connections>
                                             <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="h13-5b-Zgs"/>
@@ -37,17 +43,25 @@
                                     </button>
                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xhw-13-kMu">
                                         <rect key="frame" x="0.0" y="264" width="200" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Xhw-13-kMu" secondAttribute="height" multiplier="2:1" id="pLw-5m-Wdf"/>
+                                        </constraints>
                                         <state key="normal" image="estonia"/>
                                         <connections>
                                             <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VAL-EY-iHB"/>
                                         </connections>
                                     </button>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="Xhw-13-kMu" firstAttribute="height" secondItem="gDR-5D-iBD" secondAttribute="height" id="80U-pf-svh"/>
+                                    <constraint firstItem="OGS-DX-hcs" firstAttribute="height" secondItem="gDR-5D-iBD" secondAttribute="height" id="SdD-aX-KF3"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="eax-d5-9j1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JMM-fi-4vq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Xhw-13-kMu" secondAttribute="bottom" constant="20" id="fGC-y9-lq6"/>
                             <constraint firstItem="eax-d5-9j1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="gYQ-R9-7Au"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
